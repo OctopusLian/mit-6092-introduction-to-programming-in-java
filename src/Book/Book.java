@@ -14,13 +14,13 @@ public class Book {
     // Marks the book as rented
     public void borrowed() {
         // Implement this method
-        this.borrowed = true;
+        this.borrowed = false;
     }
 
     // MMarks the book as not rented
     public void returned() {
         // Implement this method
-        this.borrowed = false;
+        this.borrowed = true;
     }
 
     // Returns true if the book is rented, false otherwise
@@ -42,7 +42,7 @@ public class Book {
         System.out.println("Borrowed? (should be false): " + example.isBorrowed());
         example.returned();
         System.out.println("Borrowed? (should be true): " + example.isBorrowed());
-        example.returned();
+        example.borrowed();
         System.out.println("Borrowed? (should be false): " + example.isBorrowed());
     }
 }
